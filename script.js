@@ -6,6 +6,12 @@ function createGridItem() {
     return div;
 }
 
+function addHoverEffect(item) {
+    item.addEventListener('mouseover', () => {
+      item.style.backgroundColor = "yellow";
+    });
+}
+
 
 function createGrid(gridSize = 16) {
 
@@ -20,3 +26,26 @@ function createGrid(gridSize = 16) {
 }
   
 createGrid();
+
+function getUserGridSize() {
+    const userInput = prompt("Enter Grid size: ");
+    const gridSize = parseInt(userInput);
+
+    if(isNaN(gridSize) || gridSize <= 0 || gridSize > 100){
+        alert("Please enter a valid positive number.");
+        return null;
+    }
+
+    return gridSize;
+}
+
+function changeGridSize() {
+    const gridSize = getUserGridSize();
+
+    if(gridSize !== null){
+        createGrid(gridSize);
+    }
+}
+
+const changeGridBtn = document.querySelector("#changeSizeBtn");
+changeGridBtn.addEventListener("click", changeGridSize);
