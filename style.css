@@ -21,8 +21,7 @@ body {
 
 /* Grid Items */
 .item {
-    border: 1px solid red;
-    background-color: lightBlue;
+    border: 1px solid black;
 }
 
 #changeSizeBtn {
