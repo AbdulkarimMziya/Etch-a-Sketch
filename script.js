@@ -41,7 +41,7 @@ function random(number) {
 }
 
 function addHoverEffect(item) {
-    const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+    const rndCol = `rgba(${random(255)}, ${random(255)}, ${random(255)}, 0.4 )`;
 
     item.addEventListener('mouseover', () => {
       item.style.backgroundColor = rndCol;
